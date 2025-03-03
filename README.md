@@ -1,4 +1,6 @@
 Advanced Soybean Agricultural Dataset (2025)-Without Optimization
+
+
 About:
 The Advanced Soybean Agricultural Dataset is a comprehensive dataset designed for agricultural research and machine learning applications. Collected in 2025 by researchers from the College of Agriculture, Tikrit University, this dataset contains 55,450 rows and 13 columns, capturing key agronomic parameters influencing soybean growth and yield.
 The dataset includes crucial features such as plant height, number of pods, biological weight, chlorophyll content, protein percentage, seed yield, and relative water content in leaves. Additionally, the Parameters column encodes essential experimental conditions, including genotype variations, salicylic acid treatments, and water stress levels, providing valuable insights into how these factors impact soybean production.
