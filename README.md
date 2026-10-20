@@ -47,7 +47,7 @@
 ## 📌 Table of Contents
 
 - [🎯 About](#-about)
-- [🗂️ Repository Structure](#-repository-structure)
+- [📂 Repository Structure](#-repository-structure)
 - [🧪 Projects](#-projects)
   - [🌾 01 · Soybean Yield Prediction](#-01--soybean-yield-prediction-regression)
   - [🏢 02 · HR Employee Attrition](#-02--hr-employee-attrition-classification)
@@ -89,7 +89,7 @@ The repository spans four real-world domains:
 
 ---
 
-## 🗂️ Repository Structure
+## 📂 Repository Structure
 
 ```text
 ML-Practice/
