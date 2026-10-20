@@ -320,35 +320,29 @@ coeff_df = pd.concat([w, v], axis=1, join='inner')
 Every project in this repository follows the same reproducible sequence:
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph PREP["① Prepare"]
         direction TB
-        A["📥 Data Ingestion<br/>CSV / API"] --> B["🧹 Cleaning<br/>Nulls · Types · Renaming"]
-        B --> C["🔡 Encoding<br/>One-Hot · Ordinal"]
-        C --> D["🔍 EDA<br/>Distributions · Heatmaps"]
-        D --> E["🧪 Feature Validation<br/>Chi-Square · Correlation"]
+        A["📥 Ingestion<br/>CSV / API"] --> B["🧹 Cleaning &amp; Encoding<br/>Nulls · Types · One-Hot"]
+        B --> C["🔍 EDA &amp; Validation<br/>Distributions · Chi-Square"]
     end
 
-    subgraph BUILD["② Build & Evaluate"]
+    subgraph BUILD["② Build &amp; Evaluate"]
         direction TB
-        F["✂️ Train/Test Split<br/>80 / 20"] --> G["🤖 Model Training<br/>Linear · Trees · Boosting · ANN"]
-        G --> H["📈 Evaluation<br/>MAE · RMSE · R² · F1 · ROC-AUC"]
-        H --> I["🧠 Interpretation<br/>Coefficients · Importance"]
-        I --> J["💡 Decision Insight"]
+        D["✂️ Train/Test Split<br/>80 / 20"] --> E["🤖 Model Training<br/>Linear · Trees · ANN"]
+        E --> F["📈 Evaluation<br/>MAE · RMSE · R² · F1"]
+        F --> G["🧠 Interpretation<br/>Coefficients · Importance"]
     end
 
-    E --> F
+    C --> D
 
     style A fill:#0b2a26,stroke:#2DD4BF,color:#e2e8f0
     style B fill:#0b2a26,stroke:#2DD4BF,color:#e2e8f0
-    style C fill:#0b2a26,stroke:#2DD4BF,color:#e2e8f0
-    style D fill:#0b2a26,stroke:#4ADE80,color:#e2e8f0
-    style E fill:#0b2a26,stroke:#4ADE80,color:#e2e8f0
+    style C fill:#0b2a26,stroke:#4ADE80,color:#e2e8f0
+    style D fill:#0b2a26,stroke:#A3E635,color:#e2e8f0
+    style E fill:#0b2a26,stroke:#A3E635,color:#e2e8f0
     style F fill:#0b2a26,stroke:#A3E635,color:#e2e8f0
-    style G fill:#0b2a26,stroke:#A3E635,color:#e2e8f0
-    style H fill:#0b2a26,stroke:#A3E635,color:#e2e8f0
-    style I fill:#0b2a26,stroke:#F59E0B,color:#e2e8f0
-    style J fill:#0b2a26,stroke:#F59E0B,color:#e2e8f0
+    style G fill:#0b2a26,stroke:#F59E0B,color:#e2e8f0
 ```
 
 **Model-family decision map**
