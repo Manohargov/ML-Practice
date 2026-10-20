@@ -1,0 +1,26 @@
+# Core
+pandas>=2.0
+numpy>=1.24
+
+# Visualisation
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.15
+
+# Statistics
+scipy>=1.10
+
+# Classical machine learning
+scikit-learn>=1.2
+category-encoders>=2.5
+
+# Gradient boosting
+xgboost>=1.7
+catboost>=1.2
+lightgbm>=4.0
+
+# Deep learning
+tensorflow>=2.12
+
+# Utilities
+tqdm>=4.64
