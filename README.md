@@ -320,23 +320,31 @@ coeff_df = pd.concat([w, v], axis=1, join='inner')
 Every project in this repository follows the same reproducible sequence:
 
 ```mermaid
-flowchart LR
-    A["📥 Data Ingestion<br/>CSV / API"] --> B["🧹 Cleaning<br/>Nulls · Types · Renaming"]
-    B --> C["🔡 Encoding<br/>One-Hot · Ordinal"]
-    C --> D["🔍 EDA<br/>Distributions · Heatmaps"]
-    D --> E["🧪 Feature Validation<br/>Chi-Square · Correlation"]
-    E --> F["✂️ Train/Test Split<br/>80 / 20"]
-    F --> G["🤖 Model Training<br/>Linear · Trees · Boosting · ANN"]
-    G --> H["📈 Evaluation<br/>MAE · RMSE · R² · F1 · ROC-AUC"]
-    H --> I["🧠 Interpretation<br/>Coefficients · Importance"]
-    I --> J["💡 Decision Insight"]
+flowchart TB
+    subgraph PREP["① Prepare"]
+        direction TB
+        A["📥 Data Ingestion<br/>CSV / API"] --> B["🧹 Cleaning<br/>Nulls · Types · Renaming"]
+        B --> C["🔡 Encoding<br/>One-Hot · Ordinal"]
+        C --> D["🔍 EDA<br/>Distributions · Heatmaps"]
+        D --> E["🧪 Feature Validation<br/>Chi-Square · Correlation"]
+    end
+
+    subgraph BUILD["② Build & Evaluate"]
+        direction TB
+        F["✂️ Train/Test Split<br/>80 / 20"] --> G["🤖 Model Training<br/>Linear · Trees · Boosting · ANN"]
+        G --> H["📈 Evaluation<br/>MAE · RMSE · R² · F1 · ROC-AUC"]
+        H --> I["🧠 Interpretation<br/>Coefficients · Importance"]
+        I --> J["💡 Decision Insight"]
+    end
+
+    E --> F
 
     style A fill:#0b2a26,stroke:#2DD4BF,color:#e2e8f0
     style B fill:#0b2a26,stroke:#2DD4BF,color:#e2e8f0
     style C fill:#0b2a26,stroke:#2DD4BF,color:#e2e8f0
     style D fill:#0b2a26,stroke:#4ADE80,color:#e2e8f0
     style E fill:#0b2a26,stroke:#4ADE80,color:#e2e8f0
-    style F fill:#0b2a26,stroke:#4ADE80,color:#e2e8f0
+    style F fill:#0b2a26,stroke:#A3E635,color:#e2e8f0
     style G fill:#0b2a26,stroke:#A3E635,color:#e2e8f0
     style H fill:#0b2a26,stroke:#A3E635,color:#e2e8f0
     style I fill:#0b2a26,stroke:#F59E0B,color:#e2e8f0
