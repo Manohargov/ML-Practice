@@ -5,8 +5,8 @@
   <br/>
 
   <p>
-    <a href="https://github-readme-stats.vercel.app/api?username=Manohargov&repo=ML-Practice&show_icons=true&include_all_commits=true&theme=tokyonight">
-      <img src="https://github-readme-stats.vercel.app/api?username=Manohargov&repo=ML-Practice&show_icons=true&include_all_commits=true&theme=tokyonight" alt="Repo Stats" height="165"/>
+    <a href="https://github-readme-stats.vercel.app/api?username=Manohargov&repo=ML-Practice&show_icons=true&theme=tokyonight">
+      <img src="https://github-readme-stats.vercel.app/api?username=Manohargov&repo=ML-Practice&show_icons=true&theme=tokyonight" alt="Repo Stats" height="165"/>
     </a>
     <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=Manohargov&layout=compact&theme=tokyonight">
       <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Manohargov&layout=compact&theme=tokyonight" alt="Top Languages" height="165"/>
